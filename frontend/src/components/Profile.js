@@ -9,6 +9,7 @@ import {
   PROFILE_PAGE_LOADED,
   PROFILE_PAGE_UNLOADED,
 } from "../constants/actionTypes";
+import placeholder from "../imgs/placeholder.png"
 
 const EditProfileSettings = (props) => {
   if (props.isUser) {
@@ -129,7 +130,7 @@ class Profile extends React.Component {
           <div className="row p-4 text-center">
             <div className="user-info col-xs-12 col-md-8 offset-md-2">
               <img
-                src={profile.image}
+                src={profile.image ? profile.image : placeholder}
                 className="user-img"
                 alt={profile.username}
               />

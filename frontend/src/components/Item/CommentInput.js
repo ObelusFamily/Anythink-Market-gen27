@@ -2,6 +2,7 @@ import React from "react";
 import agent from "../../agent";
 import { connect } from "react-redux";
 import { ADD_COMMENT } from "../../constants/actionTypes";
+import placeholder from "../../imgs/placeholder.png"
 
 const mapDispatchToProps = (dispatch) => ({
   onSubmit: (payload) => dispatch({ type: ADD_COMMENT, payload }),
@@ -43,7 +44,7 @@ class CommentInput extends React.Component {
         </div>
         <div className="card-footer">
           <img
-            src={this.props.currentUser.image}
+            src={this.props.currentUser.image ? this.props.currentUser.image : placeholder}
             className="user-pic mr-2"
             alt={this.props.currentUser.username}
           />

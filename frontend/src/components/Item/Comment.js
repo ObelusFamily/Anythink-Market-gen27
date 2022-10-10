@@ -1,6 +1,7 @@
 import DeleteButton from "./DeleteButton";
 import { Link } from "react-router-dom";
 import React from "react";
+import placeholder from "../../imgs/placeholder.png"
 
 const Comment = (props) => {
   const comment = props.comment;
@@ -14,7 +15,7 @@ const Comment = (props) => {
           <div className="d-flex flex-row align-items-center pt-2">
             <Link to={`/@${comment.seller.username}`} className="user-pic mr-2">
               <img
-                src={comment.seller.image}
+                src={comment.seller.image ? comment.seller.image : placeholder}
                 className="user-pic rounded-circle"
                 alt={comment.seller.username}
               />
