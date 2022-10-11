@@ -50,16 +50,6 @@
     "format": "yarn prettier --write .",
     "lint": "yarn eslint . && yarn prettier --check ."
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "eslint:recommended",
-      "plugin:react/recommended"
-    ],
-    "rules": {
-      "no-var": "error"
-    }
-  },
   "browserslist": {
     "production": [
       ">0.2%",
