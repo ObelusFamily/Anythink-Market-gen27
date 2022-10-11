@@ -53,7 +53,8 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "eslint:recommended"
+      "eslint:recommended",
+      "plugin:react/recommended"
     ],
     "rules": {
       "no-var": "error"
