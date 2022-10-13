@@ -1,7 +1,7 @@
 import ItemActions from "./ItemActions";
 import { Link } from "react-router-dom";
 import React from "react";
-import placeholderImg from "../../imgs/placeholder.png"
+import placeholderImg from "../../imgs/placeholder.png";
 
 const ItemMeta = (props) => {
   const item = props.item;

@@ -1,7 +1,7 @@
 import DeleteButton from "./DeleteButton";
 import { Link } from "react-router-dom";
 import React from "react";
-import placeholder from "../../imgs/placeholder.png"
+import placeholder from "../../imgs/placeholder.png";
 
 const Comment = (props) => {
   const comment = props.comment;

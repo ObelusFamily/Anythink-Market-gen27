@@ -9,7 +9,7 @@ import {
   PROFILE_PAGE_LOADED,
   PROFILE_PAGE_UNLOADED,
 } from "../constants/actionTypes";
-import placeholder from "../imgs/placeholder.png"
+import placeholder from "../imgs/placeholder.png";
 
 const EditProfileSettings = (props) => {
   if (props.isUser) {
