@@ -2,5 +2,9 @@
   "dependencies": {
     "package.json": "^2.0.1",
     "prettier": "^2.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.25.0",
+    "eslint-plugin-react": "^7.31.10"
   }
 }
