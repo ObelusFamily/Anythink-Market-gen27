@@ -3,7 +3,7 @@ var uniqueValidator = require("mongoose-unique-validator");
 var slug = require("slug");
 var User = mongoose.model("User");
 
-const URL =
+const PLACEHOLDER =
   "https://images.unsplash.com/photo-1599508704512-2f19efd1e35f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cXVlc3Rpb258ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60";
 
 var ItemSchema = new mongoose.Schema(
@@ -11,7 +11,7 @@ var ItemSchema = new mongoose.Schema(
     slug: { type: String, lowercase: true, unique: true },
     title: String,
     description: String,
-    image: { type: String, default: URL },
+    image: { type: String, default: PLACEHOLDER },
     favoritesCount: { type: Number, default: 0 },
     comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment" }],
     tagList: [{ type: String }],
@@ -52,7 +52,7 @@ ItemSchema.methods.toJSONFor = function (user) {
     slug: this.slug,
     title: this.title,
     description: this.description,
-    image: this.image || URL,
+    image: this.image || PLACEHOLDER,
     createdAt: this.createdAt,
     updatedAt: this.updatedAt,
     tagList: this.tagList,
